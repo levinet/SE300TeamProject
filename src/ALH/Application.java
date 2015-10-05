@@ -7,4 +7,6 @@ public class Application {
 	//FINALLY
 	// YAY!!!!!!!!!!!!!!!!!!!!
 	
+	//Verify your Email
+	
 }
