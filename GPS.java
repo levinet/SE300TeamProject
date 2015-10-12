@@ -1,9 +1,11 @@
 
 
 /**
- * @author lopezy2
+ * @author
  * @version 1.0
  * @created 09-Oct-2015 3:16:18 PM
+ * 
+ * Thomas Levine
  */
 public class GPS {
 
