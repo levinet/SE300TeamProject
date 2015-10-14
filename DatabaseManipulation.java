@@ -37,35 +37,3 @@ public class DatabaseManipulation {
 		return false;
 	}
 }//end DatabaseManipulation
-
-/**
- * @author lopezy2
- * @version 1.0
- * @created 09-Oct-2015 3:16:18 PM
- */
-public class DatabaseManipulation {
-
-	private int contactInfo;
-	private double coordintes;
-	private double homeLocation;
-	private double time;
-	public MapGUI m_MapGUI;
-	public InfoGUI m_InfoGUI;
-	public EmergencyContact m_EmergencyContact;
-	public Database m_Database;
-
-	public DatabaseManipulation(){
-
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-	public double calculations(){
-		return 0;
-	}
-
-	public boolean checkIfLost(){
-		return false;
-	}
-}//end DatabaseManipulation

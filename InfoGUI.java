@@ -25,55 +25,19 @@ public class InfoGUI {
 
 	}
 
-	public displayInnfoGUI(){
+	public void displayInnfoGUI(){
 
 	}
 
-	public inputEmergecnyContact(){
+	public void  inputEmergecnyContact(){
 
 	}
 
-	public returnMap(){
+	public void returnMap(){
 
 	}
 
-	public update(){
-
-	}
-}//end InfoGUI
-
-/**
- * @author lopezy2
- * @version 1.0
- * @created 09-Oct-2015 3:16:18 PM
- */
-public class InfoGUI {
-
-	private double commonLocation;
-	private char contactinfo;
-	private double statistics;
-	public EmergencyContact m_EmergencyContact;
-
-	public InfoGUI(){
-
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-	public displayInnfoGUI(){
-
-	}
-
-	public inputEmergecnyContact(){
-
-	}
-
-	public returnMap(){
-
-	}
-
-	public update(){
+	public void update(){
 
 	}
 }//end InfoGUI

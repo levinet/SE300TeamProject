@@ -26,30 +26,7 @@ public class Database {
 
 	}
 
-	public storeData(){
-
-	}
-}//end Database
-
-/**
- * @author lopezy2
- * @version 1.0
- * @created 09-Oct-2015 3:16:18 PM
- */
-public class Database {
-
-	private double coordinates;
-	private double homeLocation;
-	private double time;
-
-	public Database(){
-
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-	public storeData(){
+	public void storeData(){
 
 	}
 }//end Database

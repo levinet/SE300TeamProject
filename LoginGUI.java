@@ -3,14 +3,18 @@
 /**
  * @author lopezy2
  * @version 1.0
- * @created 09-Oct-2015 3:16:18 PM
+ * @created 09-October-2015 3:16:18 PM
  */
 public class LoginGUI {
 
-	public string pasword;
-	public string username;
+	public String pasword;
+	public String username;
 	public MapGUI m_MapGUI;
-
+	
+	public static void main(String[] args){
+		System.out.println("hello world.");
+	}
+	
 	public LoginGUI(){
 
 	}
@@ -22,19 +26,19 @@ public class LoginGUI {
 		return false;
 	}
 
-	public string createNewUser(){
+	public String createNewUser(){
 		return "";
 	}
 
-	public string ecLogin(){
+	public String ecLogin(){
 		return "";
 	}
 
-	public string savePassword(){
+	public String savePassword(){
 		return "";
 	}
 
-	public string saveUserName(){
+	public String saveUserName(){
 		return "";
 	}
 }//end LoginGUI
