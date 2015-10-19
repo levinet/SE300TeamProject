@@ -8,8 +8,6 @@
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -29,8 +27,6 @@ public class MapGUI extends LoginGUI {
            panel = new JPanel();
            try {
                   image = ImageIO.read(new URL("http://maps.google.com/maps/api/staticmap?center="+gps+"&zoom=13&markers="+gps+"&size=500x300&sensor=TRUE_OR_FALSE"));
-                  								//
-                  								//http://maps.google.com/maps/api/staticmap?center="+gps+"&zoom=13&markers="+gps+"&size=500x300&sensor=TRUE_OR_FALSE
                   JLabel label = new JLabel(new ImageIcon(image));
                   panel.add(label);
                   frame.add(panel);
