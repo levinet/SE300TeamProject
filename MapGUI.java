@@ -29,7 +29,6 @@ public class MapGUI extends LoginGUI {
     JPanel panel2;
     BufferedImage image;
     
-    
     public void show(String gpsUser,String gpsHome, int zoomPer) {
            try {
         	    frame.setLayout(new FlowLayout(FlowLayout.CENTER, 15, 15));
