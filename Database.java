@@ -2,27 +2,44 @@ import java.io.File;
 import java.io.FileInputStream;
 
 
-/**
- * @author lopezy2
- * @version 1.0
- * @created 09-Oct-2015 3:16:18 PM
- *Version 1.0.0
- */
-public class Database {
+
+public class Database() {
 
 	private double coordinates;
 	private double homeLocation;
 	private double time;
 	
-	public Database(){
-		
-		//Incomplete; need to get Apache POI
-		
-		File file = new File("P://SEE300ALH.xlsx");
-		FileInputStream fis = new FileInputStream(file);
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheetAt(0);
-		
+	
+	private class 
+	public static String readFile(){
+	    BufferedReader reader = new BufferedReader( new FileReader ("SE300ALH.xlsx"));
+	    String         line = null;
+	    StringBuilder  stringBuilder = new StringBuilder();
+	    String         ls = System.getProperty("line.separator");
+
+	    while( ( line = reader.readLine() ) != null ) {
+	        stringBuilder.append( line );
+	        stringBuilder.append( ls );
+	    }
+	    
+	    reader.close();
+
+	    return stringBuilder.toString();
+	}
+	
+	public static void writeToFile(String s){
+		File locFile = new File("SE300ALH.xlsx");
+		locFile.createNewFile();
+		BufferedWriter buffWriter = new BufferedWriter(new FileWriter(locFile, true));
+
+		buffWriter.write(s);
+
+		buffWriter.close();
+	}
+	
+	
+}
+	
 		
 	}
 
