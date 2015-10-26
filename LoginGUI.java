@@ -32,7 +32,7 @@ public class LoginGUI extends JFrame {
 				}
 			}
 		});
-		MapGUI map = new MapGUI();
+		new MapGUI();
 	}
 
 	/**
@@ -61,13 +61,12 @@ public class LoginGUI extends JFrame {
 		passwordField = new JPasswordField();
 		passwordField.setBounds(186, 110, 177, 26);
 		contentPane.add(passwordField);
-		JFrame current = this;
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LoginDataBase loginDb = new LoginDataBase();
-				String user = formattedTextField.getText();
-				String pass = passwordField.getText();
+				new LoginDataBase();
+				formattedTextField.getText();
+				passwordField.getText();
 				
 //				if (loginDb.Authenticate(user,pass));
 //				{
