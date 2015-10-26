@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -12,71 +13,63 @@ import javax.swing.JDialog;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Scanner;
 
-public class LoginGUI extends JFrame {
+public class LoginGUI {
 
-	private JPanel contentPane;
-	private JPasswordField passwordField;
-
+	public static int choice;
+	public String username;
+	JFrame frame = new JFrame();
+	JPanel panel;
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LoginGUI frame = new LoginGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		new MapGUI();
+		LoginGUI start = new LoginGUI();
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	public LoginGUI() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+	public void Login() {
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100, 450, 300);
+		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		frame.add(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("User Name");
-		lblNewLabel.setBounds(94, 81, 80, 16);
-		contentPane.add(lblNewLabel);
+		Button btnNew = new Button("New User");
+		btnNew.setBounds(150, 81, 120, 30);
+		contentPane.add(btnNew);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setBounds(94, 115, 80, 16);
-		contentPane.add(lblNewLabel_1);
+		Button btnReturn = new Button("Returning User");
+		btnReturn.setBounds(150, 115, 120, 30);
+		contentPane.add(btnReturn);
 		
-		JFormattedTextField formattedTextField = new JFormattedTextField();
-		formattedTextField.setBounds(186, 76, 177, 26);
-		contentPane.add(formattedTextField);
-		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(186, 110, 177, 26);
-		contentPane.add(passwordField);
-		JButton btnLogin = new JButton("Login");
-		btnLogin.addActionListener(new ActionListener() {
+		btnNew.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new LoginDataBase();
-				formattedTextField.getText();
-				passwordField.getText();
-				
-//				if (loginDb.Authenticate(user,pass));
-//				{
-//					ApplicationWindow AppWin = new ApplicationWindow();
-//					AppWin.show();
-//					current.dispose();
-//				}
+				frame.remove(contentPane);
+				createNewUser();
 			}
 		});
-		btnLogin.setBounds(186, 154, 117, 29);
-		contentPane.add(btnLogin);
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.remove(contentPane);
+			}
+		});
+		frame.setVisible(true);
+	}
+	public LoginGUI()
+	{
+		Login();
+	}
+	public void createNewUser()
+	{
+		panel = new JPanel();
+		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		frame.add(panel);
+		panel.setLayout(null);
+		
 	}
 }
